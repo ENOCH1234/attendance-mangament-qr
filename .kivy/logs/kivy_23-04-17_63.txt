@@ -1,0 +1,21 @@
+[INFO   ] Logger: Record log in /storage/emulated/0/kivy/AttendanceApp/.kivy/logs/kivy_23-04-17_63.txt
+[WARNING] [Config      ] Upgrading configuration in progress.
+[WARNING] [Config      ] Older configuration version detected (13 instead of 21)
+[INFO   ] Kivy: v2.0.0
+[INFO   ] Kivy: Installed at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.9/site-packages/kivy/__init__.py"
+[INFO   ] Python: v3.9.7 (default, Oct  6 2021, 01:34:26) 
+[GCC 11.1.0]
+[INFO   ] Python: Interpreter at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/bin/python3"
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/storage/emulated/0/kivy/AttendanceApp/main.py", line 1, in <module>
+[WARNING] stderr:     from kivy.app import App
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.9/site-packages/kivy/app.py", line 411, in <module>
+[WARNING] stderr:     from kivy.base import runTouchApp, async_runTouchApp, stopTouchApp
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.9/site-packages/kivy/base.py", line 28, in <module>
+[WARNING] stderr:     from kivy.clock import Clock
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.9/site-packages/kivy/clock.py", line 487, in <module>
+[WARNING] stderr:     import ctypes
+[WARNING] stderr:   File "/storage/emulated/0/kivy/AttendanceApp/ctypes/__init__.py", line 20
+[WARNING] stderr:     raise Exception, ("Version number mismatch", __version__, _ctypes_version)
+[WARNING] stderr:                    ^
+[WARNING] stderr: SyntaxError: invalid syntax

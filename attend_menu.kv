@@ -1,0 +1,33 @@
+<AttendMenu>:
+    date_input: date_input
+    result_label: result_label
+    GridLayout:
+        cols: 1
+        padding: 50
+        spacing: 20
+
+        Label:
+            text: 'Enter lecture date (YYYY-MM-DD):'
+        
+        TextInput:
+            id: date_input
+        
+        Button:
+            text: 'Scan QR code'
+            background_color: 0.61, 0.15, 0.69, 0.5
+
+            on_release:
+                root.scan_qr_code()
+        
+        Label:
+            id: result_label
+            text: ''
+            font_size: 20
+        
+        Button:
+            text: '< Back'
+            background_color: 0.61, 0.15, 0.69, 0.5
+
+            on_release:
+                root.manager.transition.direction = 'right'
+                app.root.current = 'Home'

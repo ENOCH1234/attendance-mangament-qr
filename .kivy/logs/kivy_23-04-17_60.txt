@@ -1,0 +1,22 @@
+[INFO              ] Logger: Record log in /storage/emulated/0/kivy/AttendanceApp/.kivy/logs/kivy_23-04-17_60.txt
+[INFO              ] Kivy: v1.9.0
+[INFO              ] Python: v2.7.2 (default, Apr  2 2015, 13:52:41) 
+[GCC 4.8]
+[INFO              ] Factory: 173 symbols loaded
+[WARNING           ] stderr: /data/user/0/org.kivy.pygame/files/lib/python2.7/site-packages/kivy/core/image/img_pygame.py:13: RuntimeWarning: import cdrom: No module named cdrom
+[WARNING           ] stderr: (ImportError: No module named cdrom)
+[INFO              ] Image: Providers: img_tex, img_dds, img_gif, img_pygame, img_pil (img_ffpyplayer ignored)
+[WARNING           ] stderr: Traceback (most recent call last):
+[WARNING           ] stderr:   File "main.py", line 11, in <module>
+[WARNING           ] stderr:     from attend_menu import AttendMenu
+[WARNING           ] stderr:   File "/storage/emulated/0/kivy/AttendanceApp/attend_menu.py", line 11, in <module>
+[WARNING           ] stderr:     import zbar
+[WARNING           ] stderr:   File "/storage/emulated/0/kivy/AttendanceApp/zbar/__init__.py", line 1, in <module>
+[WARNING           ] stderr:     from zbar import *
+[WARNING           ] stderr:   File "/storage/emulated/0/kivy/AttendanceApp/zbar/zbar/__init__.py", line 1, in <module>
+[WARNING           ] stderr:     from zbar import *
+[WARNING           ] stderr:   File "/storage/emulated/0/kivy/AttendanceApp/zbar/zbar/zbar.py", line 25, in <module>
+[WARNING           ] stderr:     import ctypes
+[WARNING           ] stderr:   File "/storage/emulated/0/kivy/AttendanceApp/ctypes/__init__.py", line 10, in <module>
+[WARNING           ] stderr:     from _ctypes import Union, Structure, Array
+[WARNING           ] stderr: ImportError: No module named _ctypes

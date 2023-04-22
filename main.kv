@@ -1,0 +1,207 @@
+<HomeScreen>:
+    FloatLayout:
+        Label:
+            text: 'Lab Attendance App'
+            size_hint: (.8, .07)
+            pos_hint: {'x': .1, 'y': .8}
+            bold: True
+        Button:
+            text: 'Registration'
+            size_hint: (.8, .07)
+            pos_hint: {'x': .1, 'y': .5}
+            background_color: 0.61, 0.15, 0.69, 0.5
+
+            on_press: 
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'register'
+        Button:
+            text: 'Attendance'
+            size_hint: (.8, .07)
+            pos_hint: {'x': .1, 'y': .4}
+            background_color: 0.61, 0.15, 0.69, 0.5
+
+            on_press: 
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'Attendance'
+        Button:
+            text: 'Report'
+            size_hint: (.8, .07)
+            pos_hint: {'x': .1, 'y': .3}
+            background_color: 0.61, 0.15, 0.69, 0.5
+
+            on_press: 
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'report'
+        Button:
+            text: 'Exit'
+            size_hint: (.8, .07)
+            pos_hint: {'x': .1, 'y': .2}
+            background_color: 0.61, 0.15, 0.69, 0.5
+
+            on_press: 
+                app.stop()
+
+<RegisterSuccess>:
+	Label:
+        text: "Student has been registered Successfully"
+        bold: True
+        size_hint: 0.2, 0.1
+        pos_hint: {"x" : 0.4, "top" : 0.5}
+	Button:
+        text: "Back to Main Menu"
+        size_hint: 0.4, 0.1
+        background_color: 0.61, 0.15, 0.69, 0.5
+        pos_hint: {"x" : 0.33, "top" : 0.3}
+        on_release: 
+            root.manager.transition.direction = 'right'
+            root.manager.current = 'Home'
+            
+<labMenu>:
+    FloatLayout:
+    	Label:
+	    	text: "Enter the number of available Labs"
+	    	pos_hint: {'x': .35, 'y': .7}
+	    	size_hint: (.1, .2)
+	    	font_size: 45
+		TextInput:
+			id: nLabs
+	    	hint_text: "2"
+	    	size_hint: (.1, .05)
+	    	pos_hint: {'x': .75, 'y': .77}
+	    	input_filter: 'int'
+	    	multiline: False
+	    Label:
+	    	text: "maximum capacity of each lab"
+	    	pos_hint: {'x': .35, 'y': .62}
+	    	size_hint: (.1, .2)
+	    	font_size: "45"
+		TextInput:
+			id: mLab
+	    	hint_text: "50"
+	    	input_filter: 'int'
+	    	size_hint: (.1, .05)
+	    	pos_hint: {'x': .75, 'y': .70}
+	    	multiline: False
+	    Button:
+	    	text: "Save"
+	    	on_press: 
+	    		root.labreg() 
+	    		root.manager.current = 'Home'
+	    	size_hint: (0.4, 0.1)
+	    	pos_hint: {'x': 0.5, 'y':0.5}
+	    	background_color: 0.61, 0.15, 0.69, 0.5
+	    Button:
+	    	text: "Back"
+	    	on_press: 
+	    		root.manager.transition.direction = 'right'
+	    		root.manager.current = 'Home'
+	    	size_hint: (0.4, 0.1)
+	    	pos_hint: {'x': 0.1, 'y':0.5}
+	    	background_color: 1.23, 1.56, 1.70, .5          
+
+<RegisterMenu>:
+	FloatLayout:
+		Label:
+        	text: "Number of available Labs: "
+        	size_hint: 0.2, 0.1
+        	pos_hint: {"x":0.3, "y":0.7}
+		TextInput:
+        	id: lab_number_input
+			multiline: False
+			input_filter: 'int'
+			size_hint: 0.1, 0.05
+			pos_hint: {"x": 0.65, "y":0.73}
+    	Label:
+        	text: "First Name "
+        	bold: True
+        	size_hint: 0.2, 0.1
+        	pos_hint: {"x":0.2, "y":0.6}
+		TextInput:
+        	id: first_name_input
+			multiline: False
+			size_hint: 0.3, 0.05
+			pos_hint: {"x" : 0.45, "y" : 0.63}
+		Label:
+			text: "Last Name "
+			size_hint: 0.2, 0.1
+			bold: True
+			pos_hint: {"x" : 0.2, "y" : 0.5}
+		TextInput:
+			id: last_name_input
+			multiline: False
+			size_hint: 0.3, 0.05
+			pos_hint: {"x" : 0.45, "y" : 0.53}
+		Label:
+			text: "Matric Number "
+			size_hint: 0.2, 0.1
+			pos_hint: {"x" : 0.2, "y" : 0.4}
+			bold: True
+		TextInput:
+			id: matric_number_input
+			multiline: False
+			input_filter: 'int'
+			size_hint: 0.3, 0.05
+			pos_hint: {"x" : 0.45, "y" : 0.43}
+		Button:
+			text: "Register"
+			size_hint: 0.4, 0.07
+			pos_hint: {"x" : 0.3, "y" : 0.3}
+			background_color: 0.61, 0.15, 0.69, 0.5
+			on_press:
+            	root.save_data()
+            	root.manager.current = 'Successful'
+		Button:
+	    	text: "< Back"
+	    	background_color: 0.61, 0.15, 0.69, 0.5
+
+	    	on_press: 
+	    		root.manager.transition.direction = 'right'
+	    		root.manager.current = 'Home'
+	    	size_hint: (0.4, 0.07)
+	    	pos_hint: {'x': 0.3, 'y':0.1}
+	    			 
+	    	
+<ReportMenu>:
+    GridLayout:
+        cols: 1
+        padding: 50
+        spacing: 20
+
+        Label:
+            text: "Total Number of Classes Conducted : {}".format(root.count_folders())
+        
+        Label:
+            text: "Enter lecture date (YYYYMMDD):"
+        
+        TextInput:
+            id: date_input
+        
+        Button:
+            text: 'Check Attendance'
+            background_color: 0.61, 0.15, 0.69, 0.5
+
+            on_release:
+                root.export_attendance_to_excel(date_input.text)
+                result_label.text = "Total number of attendance for the date: {}".format(root.total_attendance)
+                
+        Button:
+            text: 'See all Registered Students'
+            background_color: 0.61, 0.15, 0.69, 0.5
+
+            on_release:
+                root.export_data()
+        
+        Label:
+            id: result_label
+            text: ''
+            font_size: 20
+        
+                
+        Button:
+            text: 'Back to Home'
+            background_color: 0.61, 0.15, 0.69, 0.5
+
+            on_release:
+                root.manager.transition.direction = 'right'
+                app.root.current = 'Home'
+ 	

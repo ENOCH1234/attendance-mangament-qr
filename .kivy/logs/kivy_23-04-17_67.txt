@@ -1,0 +1,27 @@
+[INFO   ] Logger: Record log in /storage/emulated/0/kivy/AttendanceApp/.kivy/logs/kivy_23-04-17_67.txt
+[INFO   ] Kivy: v2.0.0
+[INFO   ] Kivy: Installed at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.9/site-packages/kivy/__init__.py"
+[INFO   ] Python: v3.9.7 (default, Oct  6 2021, 01:34:26) 
+[GCC 11.1.0]
+[INFO   ] Python: Interpreter at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/bin/python3"
+[INFO   ] Logger: Purge log fired. Analysing...
+[INFO   ] Logger: Purge 13 log files
+[INFO   ] Logger: Purge finished!
+[INFO   ] Factory: 186 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2, img_pil (img_ffpyplayer ignored)
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/storage/emulated/0/kivy/AttendanceApp/main.py", line 11, in <module>
+[WARNING] stderr:     from attend_menu import AttendMenu
+[WARNING] stderr:   File "/storage/emulated/0/kivy/AttendanceApp/attend_menu.py", line 13, in <module>
+[WARNING] stderr:     from zbarcam import ZBarCam
+[WARNING] stderr:   File "/storage/emulated/0/kivy/AttendanceApp/zbarcam/__init__.py", line 15, in <module>
+[WARNING] stderr:     from .zbarcam import ZBarCam  # noqa
+[WARNING] stderr:   File "/storage/emulated/0/kivy/AttendanceApp/zbarcam/zbarcam.py", line 131, in <module>
+[WARNING] stderr:     class ZBarCam(AnchorLayout):
+[WARNING] stderr:   File "/storage/emulated/0/kivy/AttendanceApp/zbarcam/zbarcam.py", line 142, in ZBarCam
+[WARNING] stderr:     code_types = ListProperty(XZbarDecoder().get_available_code_types())
+[WARNING] stderr:   File "/storage/emulated/0/kivy/AttendanceApp/zbarcam/zbarcam.py", line 110, in __init__
+[WARNING] stderr:     self.zbar_decoder or self._get_implementation())
+[WARNING] stderr:   File "/storage/emulated/0/kivy/AttendanceApp/zbarcam/zbarcam.py", line 119, in _get_implementation
+[WARNING] stderr:     raise ImportError(
+[WARNING] stderr: ImportError: No zbar implementation available (tried pyzbar, zbarlight)

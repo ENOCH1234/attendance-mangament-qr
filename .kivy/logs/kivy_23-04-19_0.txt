@@ -1,0 +1,19 @@
+[INFO   ] Logger: Record log in /storage/emulated/0/AttendanceApp/.kivy/logs/kivy_23-04-19_0.txt
+[INFO   ] Kivy: v2.1.0
+[INFO   ] Kivy: Installed at "/storage/emulated/0/AttendanceApp/kivy/__init__.py"
+[INFO   ] Python: v3.9.7 (default, Oct  9 2021, 08:02:40) 
+[GCC 11.1.0]
+[INFO   ] Python: Interpreter at "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/bin/python3"
+[INFO   ] Logger: Purge log fired. Processing...
+[INFO   ] Logger: Purge finished!
+[ERROR  ] Clock: Unable to import kivy._clock. Have you perhaps forgotten to compile kivy? Kivy contains Cython code which needs to be compiled. A missing kivy._clock often indicates the Cython code has not been compiled. Please follow the installation instructions and make sure to compile Kivy
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/storage/emulated/0/AttendanceApp/main.py", line 1, in <module>
+[WARNING] stderr:     from kivy.app import App
+[WARNING] stderr:   File "/storage/emulated/0/AttendanceApp/kivy/app.py", line 416, in <module>
+[WARNING] stderr:     from kivy.base import runTouchApp, async_runTouchApp, stopTouchApp
+[WARNING] stderr:   File "/storage/emulated/0/AttendanceApp/kivy/base.py", line 28, in <module>
+[WARNING] stderr:     from kivy.clock import Clock
+[WARNING] stderr:   File "/storage/emulated/0/AttendanceApp/kivy/clock.py", line 466, in <module>
+[WARNING] stderr:     from kivy._clock import CyClockBase, ClockEvent, FreeClockEvent, \
+[WARNING] stderr: ModuleNotFoundError: No module named 'kivy._clock'

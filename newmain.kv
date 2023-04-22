@@ -1,0 +1,24 @@
+#:import MDNavigationDrawer kivymd.uix.navigationdrawer.MDNavigationDrawer
+#:import NavigationDrawerIconButton kivymd.uix.navigationdrawer.NavigationDrawerIconButton
+
+
+MDNavigationDrawer:
+    NavigationDrawerIconButton:
+        text: "Register Students"
+        icon: "account-plus-outline"
+        on_release: 
+            root.manager.current= 'register'
+    NavigationDrawerIconButton:
+        text: "Attendance"
+        icon: "clipboard-check-outline"
+        on_release:
+            root.manager.current= 'register'
+    NavigationDrawerIconButton:
+        text: "Report Menu"
+        icon: "chart-bar-stacked"
+        on_release: 
+            root.manager.current= 'register'
+    NavigationDrawerIconButton:
+        text: "Exit"
+        icon: "exit-to-app"
+        on_release: app.stop()
