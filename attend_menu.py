@@ -43,21 +43,21 @@ class AttendMenu(Screen):
         detector = cv2.QRCodeDetector()
 
         # create new instance of camera
-        # self.camera = CameraWidget()
-        # self.camera.play = True
+        self.camera = CameraWidget()
+        self.camera.play = True
 
-        # :import ZBarCam kivy_garden.zbarcam.ZBarCam
-        BoxLayout:
-            orientation: 'vertical'
-            ZBarCam:
-                id: zbarcam
-                # optional, by default checks all types
-                code_types: 'QRCODE', 'EAN13'
-            Label:
-                size_hint: None, None
-                size: self.texture_size[0], 50
-                text: ', '.join([str(symbol.data)
-                                for symbol in zbarcam.symbols])
+        # # :import ZBarCam kivy_garden.zbarcam.ZBarCam
+        # BoxLayout:
+        #     orientation: 'vertical'
+        #     ZBarCam:
+        #         id: zbarcam
+        #         # optional, by default checks all types
+        #         code_types: 'QRCODE', 'EAN13'
+        #     Label:
+        #         size_hint: None, None
+        #         size: self.texture_size[0], 50
+        #         text: ', '.join([str(symbol.data)
+        #                         for symbol in zbarcam.symbols])
 
         # decode QR code using OpenCV QR Code detector
         while True:
